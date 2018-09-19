@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- <link rel="shortcut icon" href="static/css/vendor/images/favicon.ico"> -->
+
+    <title>OSU Web Scraper</title>
+    <!-- <link href="vendor/font-awesome.min.css" rel="stylesheet"> -->
+    <link href="vendor/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="vendor/bootstrap-switch.css" rel="stylesheet" type="text/css">
+    <!-- <link href="vendor/jquery.dataTables.css" rel="stylesheet" type="text/css"> -->
+    <!-- <link href="vendor/select2.css" rel="stylesheet" type="text/css"> -->
+    <!-- <link href="vendor/select2-bootstrap.css" rel="stylesheet" type="text/css"> -->
+    <!-- <link href="main.css" rel="stylesheet" type="text/css"> -->
+
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <i class="icon-bar"></i>
+            <i class="icon-bar"></i>
+            <i class="icon-bar"></i>
+          </button>
+          <a href="https://github.com/cse3901-osu-2018su/MAG-C-Project-3-Ruby-Web-Scraping"><span class="navbar-brand">OSU Web Scraper</span></a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li id="jobs-tab"><a href="/osu_housing_scraper">Housing</a></li>
+            <li id="executions-tab"><a href="/osu_sports_scraper">Sports</a></li>
+            <li id="logs-tab"><a href="/osu_student_job_scraper">Student Jobs</a></li>
+            <!-- <li id="username"><a ></a></li>
+            <li id="logout" ><a href="/auth/logout/">Log out</a></li> -->
+          </ul>
+        </div>
+      </div>
+    </div> <!-- End of navbar -->
+    <%= yield %>
+</body>
+
+<script id="jobs-meta-info" type="application/json">
+    {% raw jobs_meta_info %}
+</script>
+
+</html>

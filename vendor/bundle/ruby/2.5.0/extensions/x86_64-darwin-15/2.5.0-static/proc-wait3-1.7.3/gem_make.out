@@ -1,0 +1,51 @@
+current directory: /Users/Gailzhi/Desktop/Git/MAG-C-Project-3-Ruby-Web-Scraping/vendor/bundle/ruby/2.5.0/gems/proc-wait3-1.7.3/ext
+/Users/Gailzhi/.rbenv/versions/2.5.0/bin/ruby -r ./siteconf20180614-56295-z7cll0.rb extconf.rb
+checking for wait.h... no
+checking for sys/resource.h... yes
+checking for sys/wait.h... yes
+checking for wait3()... yes
+checking for str2sig()... no
+checking for strlcpy()... yes
+checking for wait4()... yes
+checking for waitid()... yes
+checking for sigset()... yes
+checking for sigsend()... no
+checking for getrusage()... yes
+checking for getdtablesize()... yes
+checking for struct siginfo.si_fd in signal.h... no
+checking for struct siginfo.si_trapno in signal.h... no
+checking for struct siginfo.si_pc in signal.h... no
+checking for struct siginfo.si_sysarg in signal.h... no
+checking for struct siginfo.si_mstate in signal.h... no
+checking for struct siginfo.si_faddr in signal.h... no
+checking for struct siginfo.si_syscall in signal.h... no
+checking for struct siginfo.si_nsysarg in signal.h... no
+checking for struct siginfo.si_fault in signal.h... no
+checking for struct siginfo.si_tstamp in signal.h... no
+checking for struct siginfo.si_utime in signal.h... no
+checking for struct siginfo.si_status in signal.h... no
+checking for struct siginfo.si_stime in signal.h... no
+checking for P_CID... no
+checking for P_GID... no
+checking for P_MYID... no
+checking for P_SID... no
+checking for P_UID... no
+checking for P_ALL... yes
+checking for P_PGID... yes
+checking for P_PID... yes
+checking for P_PROJID... no
+checking for P_TASKID... no
+checking for RUSAGE_THREAD... no
+creating Makefile
+
+current directory: /Users/Gailzhi/Desktop/Git/MAG-C-Project-3-Ruby-Web-Scraping/vendor/bundle/ruby/2.5.0/gems/proc-wait3-1.7.3/ext
+make "DESTDIR=" clean
+
+current directory: /Users/Gailzhi/Desktop/Git/MAG-C-Project-3-Ruby-Web-Scraping/vendor/bundle/ruby/2.5.0/gems/proc-wait3-1.7.3/ext
+make "DESTDIR="
+compiling proc/wait3.c
+linking shared-object proc/wait3.bundle
+
+current directory: /Users/Gailzhi/Desktop/Git/MAG-C-Project-3-Ruby-Web-Scraping/vendor/bundle/ruby/2.5.0/gems/proc-wait3-1.7.3/ext
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 wait3.bundle ./.gem.20180614-56295-sbef2y/proc

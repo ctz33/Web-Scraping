@@ -1,0 +1,926 @@
+have_header: checking for wait.h... -------------------- no
+
+"clang -o conftest -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0/x86_64-darwin15 -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0/ruby/backward -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0 -I. -I/Users/Gailzhi/.rbenv/versions/2.5.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe conftest.c  -L. -L/Users/Gailzhi/.rbenv/versions/2.5.0/lib -L. -L/Users/Gailzhi/.rbenv/versions/2.5.0/lib  -fstack-protector -L/usr/local/lib     -lruby.2.5.0-static -framework Foundation  -lpthread -lgmp -ldl -lobjc "
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main(int argc, char **argv)
+4: {
+5:   return 0;
+6: }
+/* end */
+
+"clang -E -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0/x86_64-darwin15 -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0/ruby/backward -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0 -I. -I/Users/Gailzhi/.rbenv/versions/2.5.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe  conftest.c -o conftest.i"
+conftest.c:3:10: fatal error: 'wait.h' file not found
+#include <wait.h>
+         ^
+1 error generated.
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <wait.h>
+/* end */
+
+--------------------
+
+have_header: checking for sys/resource.h... -------------------- yes
+
+"clang -E -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0/x86_64-darwin15 -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0/ruby/backward -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0 -I. -I/Users/Gailzhi/.rbenv/versions/2.5.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <sys/resource.h>
+/* end */
+
+--------------------
+
+have_header: checking for sys/wait.h... -------------------- yes
+
+"clang -E -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0/x86_64-darwin15 -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0/ruby/backward -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0 -I. -I/Users/Gailzhi/.rbenv/versions/2.5.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <sys/wait.h>
+/* end */
+
+--------------------
+
+have_func: checking for wait3()... -------------------- yes
+
+"clang -o conftest -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0/x86_64-darwin15 -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0/ruby/backward -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0 -I. -I/Users/Gailzhi/.rbenv/versions/2.5.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe conftest.c  -L. -L/Users/Gailzhi/.rbenv/versions/2.5.0/lib -L. -L/Users/Gailzhi/.rbenv/versions/2.5.0/lib  -fstack-protector -L/usr/local/lib     -lruby.2.5.0-static -framework Foundation  -lpthread -lgmp -ldl -lobjc "
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { void ((*volatile p)()); p = (void ((*)()))wait3; return !p; }
+/* end */
+
+--------------------
+
+have_func: checking for str2sig()... -------------------- no
+
+"clang -o conftest -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0/x86_64-darwin15 -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0/ruby/backward -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0 -I. -I/Users/Gailzhi/.rbenv/versions/2.5.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe conftest.c  -L. -L/Users/Gailzhi/.rbenv/versions/2.5.0/lib -L. -L/Users/Gailzhi/.rbenv/versions/2.5.0/lib  -fstack-protector -L/usr/local/lib     -lruby.2.5.0-static -framework Foundation  -lpthread -lgmp -ldl -lobjc "
+conftest.c:13:57: error: use of undeclared identifier 'str2sig'
+int t(void) { void ((*volatile p)()); p = (void ((*)()))str2sig; return !p; }
+                                                        ^
+1 error generated.
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { void ((*volatile p)()); p = (void ((*)()))str2sig; return !p; }
+/* end */
+
+"clang -o conftest -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0/x86_64-darwin15 -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0/ruby/backward -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0 -I. -I/Users/Gailzhi/.rbenv/versions/2.5.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe conftest.c  -L. -L/Users/Gailzhi/.rbenv/versions/2.5.0/lib -L. -L/Users/Gailzhi/.rbenv/versions/2.5.0/lib  -fstack-protector -L/usr/local/lib     -lruby.2.5.0-static -framework Foundation  -lpthread -lgmp -ldl -lobjc "
+Undefined symbols for architecture x86_64:
+  "_str2sig", referenced from:
+      _t in conftest-6763f9.o
+ld: symbol(s) not found for architecture x86_64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: extern void str2sig();
+14: int t(void) { str2sig(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for strlcpy()... -------------------- yes
+
+"clang -o conftest -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0/x86_64-darwin15 -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0/ruby/backward -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0 -I. -I/Users/Gailzhi/.rbenv/versions/2.5.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe conftest.c  -L. -L/Users/Gailzhi/.rbenv/versions/2.5.0/lib -L. -L/Users/Gailzhi/.rbenv/versions/2.5.0/lib  -fstack-protector -L/usr/local/lib     -lruby.2.5.0-static -framework Foundation  -lpthread -lgmp -ldl -lobjc "
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { void ((*volatile p)()); p = (void ((*)()))strlcpy; return !p; }
+/* end */
+
+--------------------
+
+have_func: checking for wait4()... -------------------- yes
+
+"clang -o conftest -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0/x86_64-darwin15 -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0/ruby/backward -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0 -I. -I/Users/Gailzhi/.rbenv/versions/2.5.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe conftest.c  -L. -L/Users/Gailzhi/.rbenv/versions/2.5.0/lib -L. -L/Users/Gailzhi/.rbenv/versions/2.5.0/lib  -fstack-protector -L/usr/local/lib     -lruby.2.5.0-static -framework Foundation  -lpthread -lgmp -ldl -lobjc "
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { void ((*volatile p)()); p = (void ((*)()))wait4; return !p; }
+/* end */
+
+--------------------
+
+have_func: checking for waitid()... -------------------- yes
+
+"clang -o conftest -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0/x86_64-darwin15 -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0/ruby/backward -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0 -I. -I/Users/Gailzhi/.rbenv/versions/2.5.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe conftest.c  -L. -L/Users/Gailzhi/.rbenv/versions/2.5.0/lib -L. -L/Users/Gailzhi/.rbenv/versions/2.5.0/lib  -fstack-protector -L/usr/local/lib     -lruby.2.5.0-static -framework Foundation  -lpthread -lgmp -ldl -lobjc "
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { void ((*volatile p)()); p = (void ((*)()))waitid; return !p; }
+/* end */
+
+--------------------
+
+have_func: checking for sigset()... -------------------- yes
+
+"clang -o conftest -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0/x86_64-darwin15 -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0/ruby/backward -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0 -I. -I/Users/Gailzhi/.rbenv/versions/2.5.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe conftest.c  -L. -L/Users/Gailzhi/.rbenv/versions/2.5.0/lib -L. -L/Users/Gailzhi/.rbenv/versions/2.5.0/lib  -fstack-protector -L/usr/local/lib     -lruby.2.5.0-static -framework Foundation  -lpthread -lgmp -ldl -lobjc "
+conftest.c:13:57: error: use of undeclared identifier 'sigset'
+int t(void) { void ((*volatile p)()); p = (void ((*)()))sigset; return !p; }
+                                                        ^
+1 error generated.
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { void ((*volatile p)()); p = (void ((*)()))sigset; return !p; }
+/* end */
+
+"clang -o conftest -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0/x86_64-darwin15 -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0/ruby/backward -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0 -I. -I/Users/Gailzhi/.rbenv/versions/2.5.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe conftest.c  -L. -L/Users/Gailzhi/.rbenv/versions/2.5.0/lib -L. -L/Users/Gailzhi/.rbenv/versions/2.5.0/lib  -fstack-protector -L/usr/local/lib     -lruby.2.5.0-static -framework Foundation  -lpthread -lgmp -ldl -lobjc "
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: extern void sigset();
+14: int t(void) { sigset(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for sigsend()... -------------------- no
+
+"clang -o conftest -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0/x86_64-darwin15 -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0/ruby/backward -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0 -I. -I/Users/Gailzhi/.rbenv/versions/2.5.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe conftest.c  -L. -L/Users/Gailzhi/.rbenv/versions/2.5.0/lib -L. -L/Users/Gailzhi/.rbenv/versions/2.5.0/lib  -fstack-protector -L/usr/local/lib     -lruby.2.5.0-static -framework Foundation  -lpthread -lgmp -ldl -lobjc "
+conftest.c:13:57: error: use of undeclared identifier 'sigsend'; did you mean 'signed'?
+int t(void) { void ((*volatile p)()); p = (void ((*)()))sigsend; return !p; }
+                                                        ^~~~~~~
+                                                        signed
+conftest.c:13:57: error: expected expression
+2 errors generated.
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { void ((*volatile p)()); p = (void ((*)()))sigsend; return !p; }
+/* end */
+
+"clang -o conftest -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0/x86_64-darwin15 -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0/ruby/backward -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0 -I. -I/Users/Gailzhi/.rbenv/versions/2.5.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe conftest.c  -L. -L/Users/Gailzhi/.rbenv/versions/2.5.0/lib -L. -L/Users/Gailzhi/.rbenv/versions/2.5.0/lib  -fstack-protector -L/usr/local/lib     -lruby.2.5.0-static -framework Foundation  -lpthread -lgmp -ldl -lobjc "
+Undefined symbols for architecture x86_64:
+  "_sigsend", referenced from:
+      _t in conftest-8de816.o
+ld: symbol(s) not found for architecture x86_64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: extern void sigsend();
+14: int t(void) { sigsend(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for getrusage()... -------------------- yes
+
+"clang -o conftest -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0/x86_64-darwin15 -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0/ruby/backward -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0 -I. -I/Users/Gailzhi/.rbenv/versions/2.5.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe conftest.c  -L. -L/Users/Gailzhi/.rbenv/versions/2.5.0/lib -L. -L/Users/Gailzhi/.rbenv/versions/2.5.0/lib  -fstack-protector -L/usr/local/lib     -lruby.2.5.0-static -framework Foundation  -lpthread -lgmp -ldl -lobjc "
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { void ((*volatile p)()); p = (void ((*)()))getrusage; return !p; }
+/* end */
+
+--------------------
+
+have_func: checking for getdtablesize()... -------------------- yes
+
+"clang -o conftest -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0/x86_64-darwin15 -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0/ruby/backward -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0 -I. -I/Users/Gailzhi/.rbenv/versions/2.5.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe conftest.c  -L. -L/Users/Gailzhi/.rbenv/versions/2.5.0/lib -L. -L/Users/Gailzhi/.rbenv/versions/2.5.0/lib  -fstack-protector -L/usr/local/lib     -lruby.2.5.0-static -framework Foundation  -lpthread -lgmp -ldl -lobjc "
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { void ((*volatile p)()); p = (void ((*)()))getdtablesize; return !p; }
+/* end */
+
+--------------------
+
+have_struct_member: checking for struct siginfo.si_fd in signal.h... -------------------- no
+
+"clang -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0/x86_64-darwin15 -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0/ruby/backward -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0 -I. -I/Users/Gailzhi/.rbenv/versions/2.5.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe   -c conftest.c"
+conftest.c:6:38: error: incomplete definition of type 'struct siginfo'
+int s = (char *)&((struct siginfo*)0)->si_fd - (char *)0;
+                 ~~~~~~~~~~~~~~~~~~~~^
+conftest.c:6:27: note: forward declaration of 'struct siginfo'
+int s = (char *)&((struct siginfo*)0)->si_fd - (char *)0;
+                          ^
+1 error generated.
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <signal.h>
+ 4: 
+ 5: /*top*/
+ 6: int s = (char *)&((struct siginfo*)0)->si_fd - (char *)0;
+ 7: int main(int argc, char **argv)
+ 8: {
+ 9:   return 0;
+10: }
+/* end */
+
+--------------------
+
+have_struct_member: checking for struct siginfo.si_trapno in signal.h... -------------------- no
+
+"clang -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0/x86_64-darwin15 -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0/ruby/backward -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0 -I. -I/Users/Gailzhi/.rbenv/versions/2.5.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe   -c conftest.c"
+conftest.c:6:38: error: incomplete definition of type 'struct siginfo'
+int s = (char *)&((struct siginfo*)0)->si_trapno - (char *)0;
+                 ~~~~~~~~~~~~~~~~~~~~^
+conftest.c:6:27: note: forward declaration of 'struct siginfo'
+int s = (char *)&((struct siginfo*)0)->si_trapno - (char *)0;
+                          ^
+1 error generated.
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <signal.h>
+ 4: 
+ 5: /*top*/
+ 6: int s = (char *)&((struct siginfo*)0)->si_trapno - (char *)0;
+ 7: int main(int argc, char **argv)
+ 8: {
+ 9:   return 0;
+10: }
+/* end */
+
+--------------------
+
+have_struct_member: checking for struct siginfo.si_pc in signal.h... -------------------- no
+
+"clang -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0/x86_64-darwin15 -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0/ruby/backward -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0 -I. -I/Users/Gailzhi/.rbenv/versions/2.5.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe   -c conftest.c"
+conftest.c:6:38: error: incomplete definition of type 'struct siginfo'
+int s = (char *)&((struct siginfo*)0)->si_pc - (char *)0;
+                 ~~~~~~~~~~~~~~~~~~~~^
+conftest.c:6:27: note: forward declaration of 'struct siginfo'
+int s = (char *)&((struct siginfo*)0)->si_pc - (char *)0;
+                          ^
+1 error generated.
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <signal.h>
+ 4: 
+ 5: /*top*/
+ 6: int s = (char *)&((struct siginfo*)0)->si_pc - (char *)0;
+ 7: int main(int argc, char **argv)
+ 8: {
+ 9:   return 0;
+10: }
+/* end */
+
+--------------------
+
+have_struct_member: checking for struct siginfo.si_sysarg in signal.h... -------------------- no
+
+"clang -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0/x86_64-darwin15 -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0/ruby/backward -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0 -I. -I/Users/Gailzhi/.rbenv/versions/2.5.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe   -c conftest.c"
+conftest.c:6:38: error: incomplete definition of type 'struct siginfo'
+int s = (char *)&((struct siginfo*)0)->si_sysarg - (char *)0;
+                 ~~~~~~~~~~~~~~~~~~~~^
+conftest.c:6:27: note: forward declaration of 'struct siginfo'
+int s = (char *)&((struct siginfo*)0)->si_sysarg - (char *)0;
+                          ^
+1 error generated.
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <signal.h>
+ 4: 
+ 5: /*top*/
+ 6: int s = (char *)&((struct siginfo*)0)->si_sysarg - (char *)0;
+ 7: int main(int argc, char **argv)
+ 8: {
+ 9:   return 0;
+10: }
+/* end */
+
+--------------------
+
+have_struct_member: checking for struct siginfo.si_mstate in signal.h... -------------------- no
+
+"clang -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0/x86_64-darwin15 -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0/ruby/backward -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0 -I. -I/Users/Gailzhi/.rbenv/versions/2.5.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe   -c conftest.c"
+conftest.c:6:38: error: incomplete definition of type 'struct siginfo'
+int s = (char *)&((struct siginfo*)0)->si_mstate - (char *)0;
+                 ~~~~~~~~~~~~~~~~~~~~^
+conftest.c:6:27: note: forward declaration of 'struct siginfo'
+int s = (char *)&((struct siginfo*)0)->si_mstate - (char *)0;
+                          ^
+1 error generated.
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <signal.h>
+ 4: 
+ 5: /*top*/
+ 6: int s = (char *)&((struct siginfo*)0)->si_mstate - (char *)0;
+ 7: int main(int argc, char **argv)
+ 8: {
+ 9:   return 0;
+10: }
+/* end */
+
+--------------------
+
+have_struct_member: checking for struct siginfo.si_faddr in signal.h... -------------------- no
+
+"clang -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0/x86_64-darwin15 -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0/ruby/backward -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0 -I. -I/Users/Gailzhi/.rbenv/versions/2.5.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe   -c conftest.c"
+conftest.c:6:38: error: incomplete definition of type 'struct siginfo'
+int s = (char *)&((struct siginfo*)0)->si_faddr - (char *)0;
+                 ~~~~~~~~~~~~~~~~~~~~^
+conftest.c:6:27: note: forward declaration of 'struct siginfo'
+int s = (char *)&((struct siginfo*)0)->si_faddr - (char *)0;
+                          ^
+1 error generated.
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <signal.h>
+ 4: 
+ 5: /*top*/
+ 6: int s = (char *)&((struct siginfo*)0)->si_faddr - (char *)0;
+ 7: int main(int argc, char **argv)
+ 8: {
+ 9:   return 0;
+10: }
+/* end */
+
+--------------------
+
+have_struct_member: checking for struct siginfo.si_syscall in signal.h... -------------------- no
+
+"clang -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0/x86_64-darwin15 -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0/ruby/backward -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0 -I. -I/Users/Gailzhi/.rbenv/versions/2.5.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe   -c conftest.c"
+conftest.c:6:38: error: incomplete definition of type 'struct siginfo'
+int s = (char *)&((struct siginfo*)0)->si_syscall - (char *)0;
+                 ~~~~~~~~~~~~~~~~~~~~^
+conftest.c:6:27: note: forward declaration of 'struct siginfo'
+int s = (char *)&((struct siginfo*)0)->si_syscall - (char *)0;
+                          ^
+1 error generated.
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <signal.h>
+ 4: 
+ 5: /*top*/
+ 6: int s = (char *)&((struct siginfo*)0)->si_syscall - (char *)0;
+ 7: int main(int argc, char **argv)
+ 8: {
+ 9:   return 0;
+10: }
+/* end */
+
+--------------------
+
+have_struct_member: checking for struct siginfo.si_nsysarg in signal.h... -------------------- no
+
+"clang -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0/x86_64-darwin15 -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0/ruby/backward -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0 -I. -I/Users/Gailzhi/.rbenv/versions/2.5.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe   -c conftest.c"
+conftest.c:6:38: error: incomplete definition of type 'struct siginfo'
+int s = (char *)&((struct siginfo*)0)->si_nsysarg - (char *)0;
+                 ~~~~~~~~~~~~~~~~~~~~^
+conftest.c:6:27: note: forward declaration of 'struct siginfo'
+int s = (char *)&((struct siginfo*)0)->si_nsysarg - (char *)0;
+                          ^
+1 error generated.
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <signal.h>
+ 4: 
+ 5: /*top*/
+ 6: int s = (char *)&((struct siginfo*)0)->si_nsysarg - (char *)0;
+ 7: int main(int argc, char **argv)
+ 8: {
+ 9:   return 0;
+10: }
+/* end */
+
+--------------------
+
+have_struct_member: checking for struct siginfo.si_fault in signal.h... -------------------- no
+
+"clang -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0/x86_64-darwin15 -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0/ruby/backward -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0 -I. -I/Users/Gailzhi/.rbenv/versions/2.5.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe   -c conftest.c"
+conftest.c:6:38: error: incomplete definition of type 'struct siginfo'
+int s = (char *)&((struct siginfo*)0)->si_fault - (char *)0;
+                 ~~~~~~~~~~~~~~~~~~~~^
+conftest.c:6:27: note: forward declaration of 'struct siginfo'
+int s = (char *)&((struct siginfo*)0)->si_fault - (char *)0;
+                          ^
+1 error generated.
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <signal.h>
+ 4: 
+ 5: /*top*/
+ 6: int s = (char *)&((struct siginfo*)0)->si_fault - (char *)0;
+ 7: int main(int argc, char **argv)
+ 8: {
+ 9:   return 0;
+10: }
+/* end */
+
+--------------------
+
+have_struct_member: checking for struct siginfo.si_tstamp in signal.h... -------------------- no
+
+"clang -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0/x86_64-darwin15 -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0/ruby/backward -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0 -I. -I/Users/Gailzhi/.rbenv/versions/2.5.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe   -c conftest.c"
+conftest.c:6:38: error: incomplete definition of type 'struct siginfo'
+int s = (char *)&((struct siginfo*)0)->si_tstamp - (char *)0;
+                 ~~~~~~~~~~~~~~~~~~~~^
+conftest.c:6:27: note: forward declaration of 'struct siginfo'
+int s = (char *)&((struct siginfo*)0)->si_tstamp - (char *)0;
+                          ^
+1 error generated.
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <signal.h>
+ 4: 
+ 5: /*top*/
+ 6: int s = (char *)&((struct siginfo*)0)->si_tstamp - (char *)0;
+ 7: int main(int argc, char **argv)
+ 8: {
+ 9:   return 0;
+10: }
+/* end */
+
+--------------------
+
+have_struct_member: checking for struct siginfo.si_utime in signal.h... -------------------- no
+
+"clang -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0/x86_64-darwin15 -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0/ruby/backward -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0 -I. -I/Users/Gailzhi/.rbenv/versions/2.5.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe   -c conftest.c"
+conftest.c:6:38: error: incomplete definition of type 'struct siginfo'
+int s = (char *)&((struct siginfo*)0)->si_utime - (char *)0;
+                 ~~~~~~~~~~~~~~~~~~~~^
+conftest.c:6:27: note: forward declaration of 'struct siginfo'
+int s = (char *)&((struct siginfo*)0)->si_utime - (char *)0;
+                          ^
+1 error generated.
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <signal.h>
+ 4: 
+ 5: /*top*/
+ 6: int s = (char *)&((struct siginfo*)0)->si_utime - (char *)0;
+ 7: int main(int argc, char **argv)
+ 8: {
+ 9:   return 0;
+10: }
+/* end */
+
+--------------------
+
+have_struct_member: checking for struct siginfo.si_status in signal.h... -------------------- no
+
+"clang -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0/x86_64-darwin15 -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0/ruby/backward -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0 -I. -I/Users/Gailzhi/.rbenv/versions/2.5.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe   -c conftest.c"
+conftest.c:6:38: error: incomplete definition of type 'struct siginfo'
+int s = (char *)&((struct siginfo*)0)->si_status - (char *)0;
+                 ~~~~~~~~~~~~~~~~~~~~^
+conftest.c:6:27: note: forward declaration of 'struct siginfo'
+int s = (char *)&((struct siginfo*)0)->si_status - (char *)0;
+                          ^
+1 error generated.
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <signal.h>
+ 4: 
+ 5: /*top*/
+ 6: int s = (char *)&((struct siginfo*)0)->si_status - (char *)0;
+ 7: int main(int argc, char **argv)
+ 8: {
+ 9:   return 0;
+10: }
+/* end */
+
+--------------------
+
+have_struct_member: checking for struct siginfo.si_stime in signal.h... -------------------- no
+
+"clang -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0/x86_64-darwin15 -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0/ruby/backward -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0 -I. -I/Users/Gailzhi/.rbenv/versions/2.5.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe   -c conftest.c"
+conftest.c:6:38: error: incomplete definition of type 'struct siginfo'
+int s = (char *)&((struct siginfo*)0)->si_stime - (char *)0;
+                 ~~~~~~~~~~~~~~~~~~~~^
+conftest.c:6:27: note: forward declaration of 'struct siginfo'
+int s = (char *)&((struct siginfo*)0)->si_stime - (char *)0;
+                          ^
+1 error generated.
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <signal.h>
+ 4: 
+ 5: /*top*/
+ 6: int s = (char *)&((struct siginfo*)0)->si_stime - (char *)0;
+ 7: int main(int argc, char **argv)
+ 8: {
+ 9:   return 0;
+10: }
+/* end */
+
+--------------------
+
+have_const: checking for P_CID... -------------------- no
+
+"clang -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0/x86_64-darwin15 -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0/ruby/backward -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0 -I. -I/Users/Gailzhi/.rbenv/versions/2.5.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe   -c conftest.c"
+conftest.c:8:16: error: use of undeclared identifier 'P_CID'; did you mean 'P_PID'?
+static int t = P_CID;
+               ^~~~~
+               P_PID
+/usr/include/sys/wait.h:81:2: note: 'P_PID' declared here
+        P_PID,
+        ^
+1 error generated.
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include "ruby.h"
+4: 
+5: #include <signal.h>
+6: 
+7: /* top */
+8: static int t = P_CID;
+/* end */
+
+--------------------
+
+have_const: checking for P_GID... -------------------- no
+
+"clang -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0/x86_64-darwin15 -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0/ruby/backward -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0 -I. -I/Users/Gailzhi/.rbenv/versions/2.5.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe   -c conftest.c"
+conftest.c:8:16: error: use of undeclared identifier 'P_GID'
+static int t = P_GID;
+               ^
+1 error generated.
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include "ruby.h"
+4: 
+5: #include <signal.h>
+6: 
+7: /* top */
+8: static int t = P_GID;
+/* end */
+
+--------------------
+
+have_const: checking for P_MYID... -------------------- no
+
+"clang -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0/x86_64-darwin15 -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0/ruby/backward -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0 -I. -I/Users/Gailzhi/.rbenv/versions/2.5.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe   -c conftest.c"
+conftest.c:5:51: error: expected "FILENAME" or <FILENAME>
+#include <signal.hclass PasswdStruct < FFI::Struct
+                                                  ^
+conftest.c:7:9: error: expected parameter declarator
+        :pw_name, :string,
+        ^
+conftest.c:7:9: error: expected ')'
+conftest.c:6:13: note: to match this '('
+      layout(
+            ^
+conftest.c:18:5: error: expected function body after function declarator
+    end>
+    ^
+4 errors generated.
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include "ruby.h"
+ 4: 
+ 5: #include <signal.hclass PasswdStruct < FFI::Struct
+ 6:       layout(
+ 7:         :pw_name, :string,
+ 8:         :pw_passwd, :string,
+ 9:         :pw_uid, :uint,
+10:         :pw_gid, :uint,
+11:         :pw_change, :ulong,
+12:         :pw_class, :string,
+13:         :pw_gecos, :string,
+14:         :pw_dir, :string,
+15:         :pw_shell, :string,
+16:         :pw_expire, :ulong
+17:       )
+18:     end>
+19: 
+20: /* top */
+21: static int t = P_MYID;
+/* end */
+
+--------------------
+
+have_const: checking for P_SID... -------------------- no
+
+"clang -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0/x86_64-darwin15 -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0/ruby/backward -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0 -I. -I/Users/Gailzhi/.rbenv/versions/2.5.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe   -c conftest.c"
+conftest.c:8:16: error: use of undeclared identifier 'P_SID'; did you mean 'P_PID'?
+static int t = P_SID;
+               ^~~~~
+               P_PID
+/usr/include/sys/wait.h:81:2: note: 'P_PID' declared here
+        P_PID,
+        ^
+1 error generated.
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include "ruby.h"
+4: 
+5: #include <signal.h>
+6: 
+7: /* top */
+8: static int t = P_SID;
+/* end */
+
+--------------------
+
+have_const: checking for P_UID... -------------------- no
+
+"clang -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0/x86_64-darwin15 -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0/ruby/backward -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0 -I. -I/Users/Gailzhi/.rbenv/versions/2.5.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe   -c conftest.c"
+conftest.c:8:16: error: use of undeclared identifier 'P_UID'; did you mean 'P_PID'?
+static int t = P_UID;
+               ^~~~~
+               P_PID
+/usr/include/sys/wait.h:81:2: note: 'P_PID' declared here
+        P_PID,
+        ^
+1 error generated.
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include "ruby.h"
+4: 
+5: #include <signal.h>
+6: 
+7: /* top */
+8: static int t = P_UID;
+/* end */
+
+--------------------
+
+have_const: checking for P_ALL... -------------------- yes
+
+"clang -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0/x86_64-darwin15 -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0/ruby/backward -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0 -I. -I/Users/Gailzhi/.rbenv/versions/2.5.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe   -c conftest.c"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include "ruby.h"
+4: 
+5: #include <signal.h>
+6: 
+7: /* top */
+8: static int t = P_ALL;
+/* end */
+
+--------------------
+
+have_const: checking for P_PGID... -------------------- yes
+
+"clang -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0/x86_64-darwin15 -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0/ruby/backward -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0 -I. -I/Users/Gailzhi/.rbenv/versions/2.5.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe   -c conftest.c"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include "ruby.h"
+4: 
+5: #include <signal.h>
+6: 
+7: /* top */
+8: static int t = P_PGID;
+/* end */
+
+--------------------
+
+have_const: checking for P_PID... -------------------- yes
+
+"clang -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0/x86_64-darwin15 -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0/ruby/backward -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0 -I. -I/Users/Gailzhi/.rbenv/versions/2.5.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe   -c conftest.c"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include "ruby.h"
+4: 
+5: #include <signal.h>
+6: 
+7: /* top */
+8: static int t = P_PID;
+/* end */
+
+--------------------
+
+have_const: checking for P_PROJID... -------------------- no
+
+"clang -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0/x86_64-darwin15 -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0/ruby/backward -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0 -I. -I/Users/Gailzhi/.rbenv/versions/2.5.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe   -c conftest.c"
+conftest.c:8:16: error: use of undeclared identifier 'P_PROJID'; did you mean 'P_PGID'?
+static int t = P_PROJID;
+               ^~~~~~~~
+               P_PGID
+/usr/include/sys/wait.h:82:2: note: 'P_PGID' declared here
+        P_PGID
+        ^
+1 error generated.
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include "ruby.h"
+4: 
+5: #include <signal.h>
+6: 
+7: /* top */
+8: static int t = P_PROJID;
+/* end */
+
+--------------------
+
+have_const: checking for P_TASKID... -------------------- no
+
+"clang -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0/x86_64-darwin15 -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0/ruby/backward -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0 -I. -I/Users/Gailzhi/.rbenv/versions/2.5.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe   -c conftest.c"
+conftest.c:8:16: error: use of undeclared identifier 'P_TASKID'
+static int t = P_TASKID;
+               ^
+1 error generated.
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include "ruby.h"
+4: 
+5: #include <signal.h>
+6: 
+7: /* top */
+8: static int t = P_TASKID;
+/* end */
+
+--------------------
+
+have_const: checking for RUSAGE_THREAD... -------------------- no
+
+"clang -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0/x86_64-darwin15 -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0/ruby/backward -I/Users/Gailzhi/.rbenv/versions/2.5.0/include/ruby-2.5.0 -I. -I/Users/Gailzhi/.rbenv/versions/2.5.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe   -c conftest.c"
+conftest.c:8:16: error: use of undeclared identifier 'RUSAGE_THREAD'
+static int t = RUSAGE_THREAD;
+               ^
+1 error generated.
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include "ruby.h"
+4: 
+5: #include <sys/resource.h>
+6: 
+7: /* top */
+8: static int t = RUSAGE_THREAD;
+/* end */
+
+--------------------
+

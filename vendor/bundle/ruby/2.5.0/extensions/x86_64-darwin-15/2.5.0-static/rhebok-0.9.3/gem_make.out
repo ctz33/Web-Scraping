@@ -1,0 +1,15 @@
+current directory: /Users/Gailzhi/Desktop/Git/MAG-C-Project-3-Ruby-Web-Scraping/vendor/bundle/ruby/2.5.0/gems/rhebok-0.9.3/ext/rhebok
+/Users/Gailzhi/.rbenv/versions/2.5.0/bin/ruby -r ./siteconf20180614-56295-1i1675o.rb extconf.rb
+creating Makefile
+
+current directory: /Users/Gailzhi/Desktop/Git/MAG-C-Project-3-Ruby-Web-Scraping/vendor/bundle/ruby/2.5.0/gems/rhebok-0.9.3/ext/rhebok
+make "DESTDIR=" clean
+
+current directory: /Users/Gailzhi/Desktop/Git/MAG-C-Project-3-Ruby-Web-Scraping/vendor/bundle/ruby/2.5.0/gems/rhebok-0.9.3/ext/rhebok
+make "DESTDIR="
+compiling rhebok.c
+linking shared-object rhebok/rhebok.bundle
+
+current directory: /Users/Gailzhi/Desktop/Git/MAG-C-Project-3-Ruby-Web-Scraping/vendor/bundle/ruby/2.5.0/gems/rhebok-0.9.3/ext/rhebok
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 rhebok.bundle ./.gem.20180614-56295-11ix2cw/rhebok
